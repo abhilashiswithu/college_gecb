@@ -1,0 +1,24 @@
+assume cs:code,ds:data
+data segment
+arr db 01h,02h,03h,04h,05h
+data ends
+code segment
+start:mov ax,data
+mov ds,ax
+mov bl,00h
+mov dl,00h
+mov cl,05h
+lea si,arr
+again:mov ax,[si]
+ror ax,01
+jnc odd
+inc bl
+jmp next
+odd:inc dl
+next:inc si
+dec cl
+jnz again
+mov ah,4ch
+int 21h
+code ends
+end start
