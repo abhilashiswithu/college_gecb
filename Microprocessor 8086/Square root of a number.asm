@@ -2,7 +2,7 @@ ASSUME CS:CODE, DS:DATA
 DATA SEGMENT
         NUM1 DW 10H
         COUNT DW 00H
-        ODD DW 01H
+        NUM2 DW 01H
 DATA ENDS
 CODE SEGMENT
 START:
@@ -10,7 +10,7 @@ START:
         MOV DS,AX
         MOV AX,NUM1
         MOV CX,COUNT
-        MOV BX,ODD
+        MOV BX,NUM2
  AGAIN: SUB AX,BX
         ADD BX,02H
         INC CX
