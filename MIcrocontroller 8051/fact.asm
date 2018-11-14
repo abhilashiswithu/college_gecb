@@ -1,0 +1,7 @@
+ORG 0000
+MOV R1,#04H
+MOV A,#01H
+LOOP: MOV B,R1
+           MUL AB
+           DJNZ R1,LOOP
+END
