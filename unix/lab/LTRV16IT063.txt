@@ -1,0 +1,18 @@
+
+-----------------------------------
+ Student Mark List
+----------------------------------- 
+
+Student Name : Abhilash
+Register Number : LTRV16IT063
+Mark1 : 88
+Mark2 : 99
+Mark3 : 88
+Mark4 : 77
+Mark5 : 88
+Total : 440
+Average : 88
+Grade : A
+Result : PASS
+
+ -----------------------------------
