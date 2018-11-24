@@ -69,19 +69,17 @@ employee=# select * from highsal(40);
 ===========================================================================
 3)
 
-CREATE OR REPLACE FUNCTION highsal(id INT)
+CREATE OR REPLACE FUNCTION experience(id INT)
 RETURNS TABLE(
-expr INT
+expr interval
 )
 AS
 $$
 BEGIN
-        IF(id IN (10,20,30,40,50)) THEN
-        
-        RETURN QUERY SELECT AGE(timestamp,doj); employee
-         WHERE dept_id=id;
+        IF(id IN (1,2,3,4,5)) THEN
+        RETURN QUERY SELECT AGE(CURRENT_DATE,doj) FROM employee WHERE emp_id=id;
         ELSE
-           RAISE NOTICE 'INVALID DEPARTMENT ID';
+           RAISE NOTICE 'INVALID EMPLOYEE ID';
         END IF;
 END;
 $$
@@ -89,6 +87,11 @@ LANGUAGE plpgsql;
 =======================
 OUTPUT:
 ======================= 
+bankpro=# select * from experience(2);
+         expr          
+-----------------------
+ 1 year 4 mons 22 days
+(1 row)
 
 
 ===========================================================================
