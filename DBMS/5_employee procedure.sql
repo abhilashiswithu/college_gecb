@@ -47,8 +47,9 @@ $$
 BEGIN
         IF(id IN (10,20,30,40,50)) THEN
         
-         RETURN QUERY SELECT DATEDIFF(year, doj, '2012-01-01'); employee
-         WHERE dept_id=id;
+         RETURN QUERY SELECT MAX(sal)
+            FROM employee NATURAL JOIN department WHERE dept_id=id;
+         
         
         ELSE
            RAISE NOTICE 'INVALID DEPARTMENT ID';
@@ -77,9 +78,8 @@ $$
 BEGIN
         IF(id IN (10,20,30,40,50)) THEN
         
-         RETURN QUERY SELECT MAX(sal)
-            FROM employee NATURAL JOIN department WHERE dept_id=id;
-        
+        RETURN QUERY SELECT DATEDIFF(year, doj, '2012-01-01'); employee
+         WHERE dept_id=id;
         ELSE
            RAISE NOTICE 'INVALID DEPARTMENT ID';
         END IF;
