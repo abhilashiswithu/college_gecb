@@ -78,7 +78,7 @@ $$
 BEGIN
         IF(id IN (10,20,30,40,50)) THEN
         
-        RETURN QUERY SELECT DATEDIFF(year, doj, '2012-01-01'); employee
+        RETURN QUERY SELECT AGE(timestamp,doj); employee
          WHERE dept_id=id;
         ELSE
            RAISE NOTICE 'INVALID DEPARTMENT ID';
