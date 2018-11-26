@@ -92,6 +92,132 @@ INSERT INTO employee VALUES
 NOTICE:  INSERT OCCURRED
 
 ===========================================================================================================================
+--4)
+
+create or replace function trigger44()
+returns trigger as
+$$
+begin
+  UPDATE employee SET emp_id = CONCAT('E0000',NEW.emp_id) WHERE emp_id = NEW.emp_id and New.emp_id NOT LIKE 'E_____';
+  return new;
+end;
+$$
+language plpgsql;
+
+create trigger trigger4 after insert on employee
+for each row execute PROCEDURE trigger44();
+
+=======================
+OUTPUT:
+=======================
+select * from employee where emp_id='E00007';
+
+"E00007";"Abhilash";"1996-09-07";"2015-06-01";150000;40
+
+===========================================================================================================================
+--5)
+
+create or replace function trigger55()
+returns trigger as
+$$
+begin
+  IF(AGE(CURRENT_DATE,NEW.dob) < AGE(CURRENT_DATE,CURRENT_DATE)) THEN
+		RAISE NOTICE  'ERROR!!!, AGE IS NEGATIVE : %',AGE(CURRENT_DATE,NEW.dob);
+	ELSE
+		RAISE NOTICE   'AGE IS : %',AGE(CURRENT_DATE,NEW.dob);
+	END IF;
+  return 0;
+end;
+$$
+language plpgsql;
+
+create trigger trigger5 before insert on employee
+for each row execute PROCEDURE trigger55();
+
+
+
+
+=======================
+OUTPUT:
+=======================
+INSERT INTO employee VALUES
+('E00008','abhi','1996-09-07','2015-11-06',150000,40);
+
+
+NOTICE:  AGE IS : 22 years 2 mons 20 days
+or
+
+INSERT INTO employee VALUES
+('E00008','abhi','2018-12-07','2015-11-06',150000,40);
+
+NOTICE:  ERROR!!!, AGE IS NEGATIVE : -10 days
+
+===========================================================================================================================
+--6)
+
+create or replace function trigger66()
+returns trigger as
+$$
+begin
+	IF(NEW.sal>= (OLD.sal/100)*80) THEN
+		RAISE NOTICE 'More than 80 percentage';
+	ELSE
+		RAISE NOTICE 'Not more than 80 percentage';
+	END IF;
+		return 0;
+end;
+$$
+language plpgsql;
+
+create trigger trigger6 before update on employee
+for each row execute PROCEDURE trigger66();
+
+=======================
+OUTPUT:
+=======================
+UPDATE employee SET sal = 40000 WHERE emp_id = 'E00004';
+
+NOTICE:  More than 80 percentage
+
+===========================================================================================================================
+--7)
+
+create or replace function trigger77()
+returns trigger as
+$$
+begin
+	IF(NEW.sal >=15000 OR NEW.sal<100000) THEN
+	
+		 INSERT INTO income_tax VALUES(NEW.emp_id,NEW.name,NEW.dob,NEW.doj,NEW.sal,NEW.dept_id,(NEW.sal/100)*10);
+		 
+	ELSIF(NEW.sal >=100000 OR NEW.sal<200000) THEN
+		
+		 INSERT INTO income_tax VALUES(NEW.emp_id,NEW.name,NEW.dob,NEW.doj,NEW.sal,NEW.dept_id,(NEW.sal/100)*15);
+		 
+	ELSIF(NEW.sal >=200000) THEN
+	
+		 INSERT INTO income_tax VALUES(NEW.emp_id,NEW.name,NEW.dob,NEW.doj,NEW.sal,NEW.dept_id,1416.50);
+		 
+	END IF;
+		return new;
+end;
+$$
+language plpgsql;
+
+create trigger trigger7 after insert or update on employee
+for each row execute PROCEDURE trigger77();
+
+=======================
+OUTPUT:
+=======================
+INSERT INTO employee VALUES
+('E00008','abhi','1995-12-07','2015-11-06',150000,40);
+
+SELECT * FROM income_tax where emp_id='E00008';
+
+"E00008";"abhi";"1995-12-07";"2015-11-06";150000;40;15000.0000000000000000
+
+===========================================================================================================================
 CREATE TABLE department(
     dept_id INT PRIMARY KEY,
     dept_name VARCHAR(30) UNIQUE NOT NULL
