@@ -159,7 +159,7 @@ create or replace function trigger66()
 returns trigger as
 $$
 begin
-	IF(NEW.sal>= (OLD.sal/100)*80) THEN
+	IF(NEW.sal>= ((OLD.sal/100)*80)+OLD.sal) THEN
 		RAISE NOTICE 'More than 80 percentage';
 	ELSE
 		RAISE NOTICE 'Not more than 80 percentage';
@@ -175,7 +175,7 @@ for each row execute PROCEDURE trigger66();
 =======================
 OUTPUT:
 =======================
-UPDATE employee SET sal = 40000 WHERE emp_id = 'E00004';
+UPDATE employee SET sal = 4000000 WHERE emp_id = 'E00004';
 
 NOTICE:  More than 80 percentage
 
