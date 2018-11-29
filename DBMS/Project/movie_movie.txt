@@ -1,0 +1,6 @@
+create table movie ( m_id int primary key not null,
+		     m_name varchar(50) unique ,
+			m_show varchar(50),
+			m_length int ,
+			m_genre varchar(50),
+			m_date date);

@@ -1,0 +1,5 @@
+create table payment ( p_id int primary key not null,
+			t_id int references transaction(t_id),
+			p_time time,
+			p_date date,
+			p_type varchar(50));

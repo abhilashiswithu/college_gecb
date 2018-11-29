@@ -1,0 +1,8 @@
+create table customer ( c_id int primary key not null, 
+			c_name varchar(50),
+			c_email varchar(100),
+			c_password varchar(50),
+			c_phone bigint,
+			c_type varchar);
+			
+			

@@ -1,0 +1,6 @@
+create table active_log ( a_id int primary key not null,
+			c_id int references customer(c_id),
+			a_login varchar(50),
+			a_logout varchar(50));
+			
+			

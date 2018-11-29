@@ -1,0 +1,8 @@
+create table booking ( b_id int primary key not null,
+			c_id int references customer(c_id),
+			p_id int references payment(p_id),
+			m_id int references movie(m_id),
+			b_ticketno int unique,
+			b_time time,
+			b_date date,
+			shw_id int references show(shw_id)); 

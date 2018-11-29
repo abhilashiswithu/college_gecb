@@ -1,0 +1,4 @@
+create table transaction ( t_id int primary key not null,
+		           t_time time ,
+			   t_date date,
+			   t_amount int );
