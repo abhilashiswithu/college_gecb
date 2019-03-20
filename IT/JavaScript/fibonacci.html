@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fibonacci Series</title>
+<script type="text/javascript">
+	function fibonacci()
+	{
+			var num=prompt("Enter the limit");
+			var li= parseInt(num);
+			document.writeln("Fibonacci Series upto the limit "+li+" is :");
+			 var a = 0, b = 0, c=1;
+			document.write(" "+a+", ");
+			while (c<=li)
+			{
+				document.write(", "+c);
+				a=b;
+				b=c;
+				c=a+b;	
+			}
+			
+	}
+</script>
+</head>
+<body onload="fibonacci()">
+<center>
+	
+</center>
+</body>
+</html>
