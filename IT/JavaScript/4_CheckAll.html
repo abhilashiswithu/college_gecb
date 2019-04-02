@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<script type="text/javascript">
+	//FILL NUMBER
+	function fillNumber()
+	{
+		var num=document.getElementById("checkall").value;
+		var n=parseInt(num);
+		document.getElementById("prime").value=n;
+		document.getElementById("palin").value=n;
+		document.getElementById("arms").value=n;
+		document.getElementById("neon").value=n;
+	}
+	//CHECK ALL
+	function CheckAll()
+	{
+			primeCheck();
+			palinCheck();
+			armsCheck();
+			neonCheck();
+	}
+	//PRIME
+	function primeCheck()
+	{
+		var num=document.getElementById("prime").value;
+		var n=parseInt(num);
+		var count=0;
+		for(var i=1;i<=n;i++)
+		{
+			if(parseInt(n%i)==0)
+				count=count+1;
+		}
+		if(count==2){		
+			document.getElementById("out1").style.color="green";
+			document.getElementById("out1").innerHTML=""+n+" is a Prime number";}
+		else{
+			document.getElementById("out1").style.color="red";
+			document.getElementById("out1").innerHTML=""+n+" is a Composite number";}
+	}
+	//PALINDROME
+	function palinCheck()
+	{
+		var num=document.getElementById("palin").value;
+		var nn=n=parseInt(num);
+		var a=0,r=0;
+		while(n>0)
+		{
+			r=parseInt(n%10);
+			a=parseInt(a*10+r);
+			n=parseInt(n/10);
+		}
+		if(a==nn){		
+			document.getElementById("out2").style.color="green";
+			document.getElementById("out2").innerHTML=""+nn+" is a Palindrome number";}
+		else{
+			document.getElementById("out2").style.color="red";
+			document.getElementById("out2").innerHTML=""+nn+" is  not a Palindrome number";}
+		return false;
+	}
+	//ARMSTRONG
+	function armsCheck()
+	{
+		var num=document.getElementById("arms").value;
+		var nn=n=parseInt(num);
+		var len=nn.toString().length;
+		var a=0,s=0;
+		while(n>0)
+		{
+			a=parseInt(n%10);
+			s=parseInt(s+Math.pow(a,len));
+			n=parseInt(n/10);
+		}
+		if(nn==s)	{		
+			document.getElementById("out3").style.color="green";
+			document.getElementById("out3").innerHTML=""+nn+" is an Armstrong number";}
+		else{
+			document.getElementById("out3").style.color="red";
+			document.getElementById("out3").innerHTML=""+nn+" is  not an Armstrong  number";}
+		return false;
+	}
+	//NEON
+	function neonCheck()
+	{
+		var num=document.getElementById("neon").value;
+		var nn=parseInt(num);
+		var n= Math.pow(nn, 2)
+		var a=0,s=0;
+		while(n>0)
+		{
+			a=parseInt(n%10);
+			s=parseInt(s+a);
+			n=parseInt(n/10);
+		}
+		if(nn==s) {		
+			document.getElementById("out4").style.color="green";
+			document.getElementById("out4").innerHTML=""+nn+" is a Neon number";}
+		else{
+			document.getElementById("out4").style.color="red";
+			document.getElementById("out4").innerHTML=""+nn+" is  not a Neon number";}
+		return false;
+	}
+</script>
+</head>
+<body bgcolor="#88C4E3">
+	<center>
+		<h1 style="color:#8B103F">C A L C U L A T O R<h1></h1><br/><hr/><br/>
+		<table border="0">
+			<tr>
+				<th>Prime</th>
+				<td><input type="text" required name="prime" id="prime" placeholder="Enter a number"></td>
+				<td><input type="submit" required name="Check" value="Check" id="prim" onclick="return primeCheck()" ></td>
+				<th><span id="out1"></span></th>
+			</tr>
+			<tr>
+				<th>Palindrome</th>
+				<td><input type="text" required name="palin" id="palin" placeholder="Enter a number"></td>
+				<td><input type="submit" required name="Check"  value="Check"  id="palinn" onclick="return palinCheck()"></td>
+				<th><span id="out2"></span></th>
+			</tr>
+			<tr>
+				<th>Armstrong</th>
+				<td><input type="text" required name="arms" id="arms" placeholder="Enter a number"></td>
+				<td><input type="submit" required name="Check"  value="Check"  id="arms" onclick="return armsCheck()"></td>
+				<th><span id="out3"></span></th>
+			</tr>
+			<tr>
+				<th>Neon</th>
+				<td><input type="text" required name="neon" id="neon" placeholder="Enter a number"></td>
+				<td><input type="submit" required name="Check" value="Check"  id="neonn" onclick="return neonCheck()"></td>
+				<th><span id="out4"></span></th>
+			</tr>
+			<tr><th colspan="4"><hr></th></tr>
+			<tr>
+				<th>Check All</th>
+				<td><input type="text" required name="all" id="checkall" placeholder="Enter a number" onchange="fillNumber()"></td>
+				<td><input type="submit" required name="Check" value="Check All"  id="checkalll" onclick="CheckAll()"></td>
+				<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+			</tr>
+		</table>
+	</center>
+</body>
+</html>
