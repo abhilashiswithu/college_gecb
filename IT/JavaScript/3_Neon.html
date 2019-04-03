@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Neon Number</title>
+<script type="text/javascript">
+	function neon()
+	{
+			var num=prompt("Enter the Number");
+			var nn=parseInt(num);
+			var n= Math.pow(nn, 2)
+			var a=0,s=0;
+			while(n>0)
+			{
+				a=parseInt(n%10);
+				s=parseInt(s+a);
+				n=parseInt(n/10);
+			}
+			if(nn==s)
+				alert(""+nn+" is a Neon Number");
+			else
+				alert(""+nn+" is not a Neon number");
+			return false;
+	}
+</script>
+</head>
+<body onload=" return neon()">
+</body>
+</html>
