@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Mail</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {font-family: monospace; background-color: powderblue;}
+            * {box-sizing: border-box}
+            button:hover {
+                opacity:1;
+            }
+            input[type=text], input[type=password] {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                display: inline-block;
+                border: none;
+                border-radius: 5px;
+                background: #f1f1f1;
+            }
+
+            input[type=text]:focus, input[type=password]:focus {
+                background-color: #ddd;
+                outline: none;
+            }
+            #div1{
+                background-color: #5fbeda;
+                width: 50%;
+                height: 500px;
+                border-radius: 10px;
+            }
+            #c{
+                background-color: #ec3945;
+                width: 50%;
+                height: 30px;
+                border-radius: 10px;
+            } 
+            #s{
+                background-color: #79dda3;
+                width: 50%;
+                height: 30px;
+                border-radius: 10px;
+            }
+            button:hover {
+                opacity:2;
+            }
+        </style>
+    </head>
+    <body>
+    <center>
+
+        <form action="home.php" method="post" style="border:1px solid #ccc">
+
+            <br>
+            <h1>Sign Up</h1>
+
+            <hr>
+            <div id="div1"><br><br><br>
+                <table>
+                    <tr>
+                        <th> <label><b>Name :</b></label></th>
+                        <td><input type="text" placeholder="Enter Name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <th> <label><b>Email :</b></label></th>
+                        <td><input type="text" placeholder="Enter Email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <th><label ><b>Password :</b></label></th>
+                        <td><input type="password" placeholder="Enter Password" name="pass" required></td>
+                    </tr>
+                    <tr>
+                        <th><label><b>Repeat Password :</b></label></th>
+                        <td><input type="password" placeholder="Repeat Password" name="pass-repeat" required></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button"  id="c">Cancel</button></td>
+                        <td><button type="submit" id="s" >Sign Up</button></td>
+                    </tr>
+                </table> <br><br>
+                <a href="login.html"> Login</a>
+            </div><br>
+            <hr>
+        </form>
+    </center>
+</body>
+</html>
