@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SBI</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color: #22a0b4">
+    <center><br>
+        <div>
+            <h1 style="font-family: monospace; color: whitesmoke;">S B I</h1><br><hr>
+            <br><br>
+            <div style="width: 30%; height: 350px; background-color:#e1fdff; border-radius: 5px;"><br>
+                <h3 style="align-content: center;  font-family: monospace; color: #325899">SIGN IN</h3><hr><br>
+                <form action="validation.jsp" method="post" >
+                    <table border="0" width="5" cellspacing="5" cellpadding="2">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="radio" name="option" value="bank_details" />Bank 
+                                <input type="radio" name="option" value="user_details" /> User
+                            </td>
+                        </tr>    
+                        <tr>
+                            <td><input style="border-radius: 10px; width: 200px; height: 30px;" type="text" name="name" placeholder="Enter username..." required/></td>
+                        </tr>
+                        <tr>
+                            <td><input  style="border-radius: 10px; width: 200px; height: 30px;"  type="password" name="pass" placeholder="Enter passcode..." required/></td>
+                        </tr>
+                        <tr>
+                            <td><input  style="border-radius: 10px; width: 200px; height: 30px; color: white; background-color: #22b122;"  type="submit" name="submit" value="sign in" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </form>
+                <br><hr>
+                <h3 style="align-content: center; font-family: monospace;"></h3><br>
+            </div>
+            <div>
+                <br><br><hr><br>
+                <h4 style="align-content: center; font-family: monospace;">&copy;2019</h4><br>
+            </div>
+        </div>
+    </center>
+    </body>
+</html>
