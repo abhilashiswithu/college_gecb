@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Employee Management System</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color: #02724d">
+    <center><br>
+        <div>
+            <h1 style="font-family: monospace; color: whitesmoke;">E M P L O Y E E &nbsp;&nbsp; M A N A G E M E N T &nbsp;&nbsp; S Y S T E M</h1><br><hr>
+            <div style="background-color:#225389; border-radius: 5px">
+                <table border="0" style="width: 100%; height:30px; color: wheat;">
+                    <tr>
+                        <th><a href="index.html" style=" text-decoration: none; color: whitesmoke;">Home</a></th>
+                        <th><a href="register.html" style=" text-decoration: none; color: whitesmoke;">Register</a></th>
+                        <th><a href="update.html" style=" text-decoration: none; color: whitesmoke;">Update</a></th>
+                        <th><a href="delete.html" style=" text-decoration: none; color: whitesmoke;">Delete</a></th>
+                        <th><a href="search.html" style=" text-decoration: none; color: whitesmoke;">Search</a></th>
+                    </tr>   
+                </table>    
+            </div><hr><br><br>
+            <div style="width: 50%; height: 400px; background-color:#e1fdff; border-radius: 5px;"><br>
+                <h3 style="align-content: center;  font-family: monospace; color: #325899">SEARCH</h3><hr><br>
+                <form action="delete" method="GET">
+                    <table border="0" width="5" cellspacing="5" cellpadding="2">
+                    <tbody>
+                        <tr>
+                            <td><input  style="border-radius: 10px; width: 400px; height: 30px;"  type="text" name="id" placeholder="enter id of student..." required/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Select the field to update<br>
+                                <input type="radio" name="option" value="name"/>name &nbsp;
+                                <input type="radio" name="option" value="mail"/>Mail &nbsp;
+                                <input type="radio" name="option" value="dept"/>Department&nbsp;
+                                <input type="radio" name="option" value="desig"/>Designation&nbsp;
+                                <input type="radio" name="option" value="dob"/>Date of Birth &nbsp;
+                                <input type="radio" name="option" value="gender"/>Gender &nbsp;
+                                <input type="radio" name="option" value="add"/>Address &nbsp;
+                                <input type="radio" name="option" value="mobno"/>Mobile No.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input  style="border-radius: 10px; width: 400px; height: 30px;"  type="text" name="update" placeholder="enter new vaule..." required/></td>
+                        </tr>
+                        <tr>
+                            <td><input  style="border-radius: 10px; width: 400px; height: 30px; color: white; background-color: #22b122;"  type="submit" name="submit" value="update" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </form>
+                <br><hr>
+                <h3 style="align-content: center; font-family: monospace;"></h3><br>
+            </div>
+            <div>
+                <br><br><hr><br>
+                <h4 style="align-content: center; font-family: monospace;">&copy;2019</h4><br>
+            </div>
+        </div>
+    </center>
+    </body>
+</html>
