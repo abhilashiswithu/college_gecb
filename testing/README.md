@@ -133,7 +133,7 @@ nothing to commit, working directory clean
 
 With Git, there are many configurations and settings possible. git config is how to assign these settings. Two important settings are user user.name and user.email. These values set what email address and name commits will be from on a local computer. With git config, a --global flag is used to write the settings to all repositories on a computer. Without a --global flag settings will only apply to the current repository that you are currently in.
 
-There are many other variables available to edit in git config. From editing color outputs to changing the behavior of git status. Learn about git config settings in the official Git documentation.
+There are many other variables available to edit in git config. From editing color outputs to changing the behavior of git status. Learn about git config settings in the official [Git documentation](https://git-scm.com/docs/git-config).
 
 Usage:
 
@@ -479,7 +479,7 @@ Practice those commands and make the most of your developing skills! Good luck!
 ## More Git Resources
 Ready to learn more about Git and it’s different commands? There are countless articles and sites on Git, here are some of our favorites:
 
-The official Git site[a link](https://github.com/user/repo/blob/branch/other_file.md)
-Git reference[a link](https://github.com/user/repo/blob/branch/other_file.md)
-Git for the lazy[a link](https://github.com/user/repo/blob/branch/other_file.md)
-Pro Git (Book)[a link](https://github.com/user/repo/blob/branch/other_file.md)
+- [The official Git site](https://git-scm.com/)
+- [Git reference](http://gitref.org/)
+- [Git for the lazy](https://wiki.spheredev.org/index.php/Git_for_the_lazy)
+- [Pro Git (Book)](https://git-scm.com/book/en/v2)
