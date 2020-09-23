@@ -1,4 +1,4 @@
-<center>![GIT](https://git-scm.com/images/logos/2color-lightbg@2x.png?"GIT Logo")</center>
+<center> ![GIT](https://git-scm.com/images/logos/2color-lightbg@2x.png?"GIT Logo") </center>
 
 # Basic GIT Commands
 
