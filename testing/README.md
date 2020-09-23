@@ -1,5 +1,5 @@
-<img src="https://git-scm.com/images/logos/2color-lightbg@2x.png">
-![](https://git-scm.com/images/logos/2color-lightbg@2x.png)
+<center><img src="https://git-scm.com/images/logos/2color-lightbg@2x.png"></center>
+
 # Basic GIT Commands
 
 Need to learn some basic GIT commands? You’ve come to the right place. Read on to discover our handy cheat sheet that you can use for daily reference.
