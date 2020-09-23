@@ -510,4 +510,4 @@ Ready to learn more about Git and it’s different commands? There are countless
 - [Pro Git (Book)](https://git-scm.com/book/en/v2)
 
 * * *
-[Top](#basic-git-commands)
+[Back to Top](#basic-git-commands)
