@@ -509,5 +509,5 @@ Ready to learn more about Git and it’s different commands? There are countless
 - [Git for the lazy](https://wiki.spheredev.org/index.php/Git_for_the_lazy)
 - [Pro Git (Book)](https://git-scm.com/book/en/v2)
 
-
+* * *
 [Top](#basic-git-commands)
