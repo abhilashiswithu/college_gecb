@@ -16,10 +16,10 @@ Everyone can use GIT as it is available for Linux, Windows, Mac, and Solaris. Th
 
 ## Basic GIT Commands
 
-- [Working with local repositories](###Working with local repositories)
-- [Advanced Git Commands](###Advanced Git Commands)
-- [Conclusion](##Conclusion)
-- [More Git Resources](##More Git Resources)
+- [Working with local repositories](#working-with-local-repositories)
+- [Advanced Git Commands](#advanced-git-commands)
+- [Conclusion](#conclusion)
+- [More Git Resources](#more-git-resources)
 
 Here are some basic GIT commands you need to know:
 
