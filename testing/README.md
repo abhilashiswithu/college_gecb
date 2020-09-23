@@ -1,5 +1,9 @@
 # Basic GIT Commands
 
+Need to learn some basic GIT commands? You’ve come to the right place. Read on to discover our handy cheat sheet that you can use for daily reference.
+
+Let’s get started!
+
 - [Understanding the GIT Workflow](#understanding-the-git-workflow)
 - [Basic GIT Commands](#basic-git-commands-1)
   - [Working with local repositories](#working-with-local-repositories)
@@ -22,10 +26,6 @@
     - [git rm](#git-rm)
 - [Conclusion](#conclusion)
 - [More Git Resources](#more-git-resources)
-
-Need to learn some basic GIT commands? You’ve come to the right place. Read on to discover our handy cheat sheet that you can use for daily reference.
-
-Let’s get started!
 
 ## Understanding the GIT Workflow
 
