@@ -1,5 +1,13 @@
 # Basic GIT Commands
 
+- [Understanding the GIT Workflow](#understanding-the-git-workflow)
+- [Basic GIT Commands](#basic-git-commands-1)
+  - [Working with local repositories](#working-with-local-repositories)
+  - [Working with local repositories](#working-with-remote-repositories)
+  - [Advanced Git Commands](#advanced-git-commands)
+- [Conclusion](#conclusion)
+- [More Git Resources](#more-git-resources)
+
 Need to learn some basic GIT commands? You’ve come to the right place. Read on to discover our handy cheat sheet that you can use for daily reference.
 
 Let’s get started!
@@ -16,16 +24,11 @@ Everyone can use GIT as it is available for Linux, Windows, Mac, and Solaris. Th
 
 ## Basic GIT Commands
 
-- [Working with local repositories](#working-with-local-repositories)
-- [Advanced Git Commands](#advanced-git-commands)
-- [Conclusion](#conclusion)
-- [More Git Resources](#more-git-resources)
-
 Here are some basic GIT commands you need to know:
 
 ### Working with local repositories
 
-- **git init**
+#### - **git init**
 
 This command turns a directory into an empty Git repository. This is the first step in creating a repository. After running git init, adding and committing files/directories is possible.
 
