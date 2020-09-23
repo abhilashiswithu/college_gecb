@@ -3,6 +3,7 @@
 - [Understanding the GIT Workflow](#understanding-the-git-workflow)
 - [Basic GIT Commands](#basic-git-commands-1)
   - [Working with local repositories](#working-with-local-repositories)
+    - [git init](#git-init)
   - [Working with local repositories](#working-with-remote-repositories)
   - [Advanced Git Commands](#advanced-git-commands)
 - [Conclusion](#conclusion)
@@ -54,7 +55,7 @@ Initialized empty Git repository in /Users/computer-name/Documents/website/.git/
 
 ```
 
-- **git add**
+- #### git add
 
 Adds files in the to the staging area for Git. Before a file is available to commit to a repository, the file needs to be added to the Git index (staging area). There are a few different ways to use git add, by adding entire directories, specific files, or all unstaged files.
 
@@ -76,7 +77,7 @@ $ git add css
 
 ```
 
-- **git commit**
+- #### git commit
 
 Record the changes made to the files to a local repository. For easy reference, each commit has a unique ID.
 
@@ -97,7 +98,7 @@ create mode 100644 homepage/index.html
 
 ```
 
-- **git status**
+- #### git status
 
 This command returns the current state of the repository.
 
@@ -136,7 +137,7 @@ nothing to commit, working directory clean
 
 ```
 
-- **git config**
+- #### git config
 
 With Git, there are many configurations and settings possible. git config is how to assign these settings. Two important settings are user user.name and user.email. These values set what email address and name commits will be from on a local computer. With git config, a --global flag is used to write the settings to all repositories on a computer. Without a --global flag settings will only apply to the current repository that you are currently in.
 
@@ -161,7 +162,7 @@ $ git config user.name "Brian Kerr"
 
 ```
 
--**git branch**
+- #### git branch
 
 To determine what branch the local repository is on, add a new branch, or delete a branch.
 
@@ -198,7 +199,7 @@ Deleted branch new_feature (was 0254c3d).
 
 ```
 
-- **git checkout**
+- #### git checkout
 
 To start working in a different branch, use git checkout to switch branches.
 
@@ -224,7 +225,7 @@ $ git checkout -b staging
 Switched to a new branch 'staging'
 
 ```
-- **git merge**
+- #### git merge
 
 Integrate branches together. git merge combines the changes from one branch to another branch. For example, merge the changes made in a staging branch into the stable branch.
 
@@ -250,7 +251,7 @@ Fast-forward
 
 ### Working with remote repositories
 
-- **git remote**
+- #### git remote
 
 To connect a local repository with a remote repository. A remote repository can have a name set to avoid having to remember the URL of the repository.
 
@@ -275,7 +276,7 @@ origin git@account_name.git.beanstalkapp.com:/acccount_name/repository_name.git 
 
 > Note: A remote repository can have any name. It’s common practice to name the remote repository ‘origin’.
 
-- **git clone**
+- #### git clone
 
 To create a local working copy of an existing remote repository, use git clone to copy and download the repository to a computer. Cloning is the equivalent of git init when working with a remote repository. Git will create a directory locally with all files and repository history.
 
@@ -293,7 +294,7 @@ remote: Total 5 (delta 0), reused 0 (delta 0)
 Receiving objects: 100% (5/5), 3.08 KiB | 0 bytes/s, done.
 Checking connectivity... done.
 ```
-- **git pull**
+- #### git pull
 
 To get the latest version of a repository run git pull. This pulls the changes from the remote repository to the local computer.
 
@@ -317,7 +318,7 @@ From account_name.git.beanstalkapp.com:/account_name/repository_name
  * [new branch]      staging    -> origin/staging
 Already up-to-date.
 ```
-- **git push**
+- #### git push
 
 Sends local commits to the remote repository. git push requires two parameters: the remote repository and the branch that the push is for.
 
@@ -355,7 +356,7 @@ To git@account_name.git.beanstalkapp.com:/acccount_name/repository_name.git
 
 ### Advanced Git Commands
 
-- **git stash**
+- #### git stash
 
 To save changes made when they’re not in a state to commit them to a repository. This will store the work and give a clean working directory. For instance, when working on a new feature that’s not complete, but an urgent bug needs attention.
 
@@ -390,7 +391,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 Dropped refs/stash@{0} (3561897724c1f448ae001edf3ef57415778755ec)
 ```
 
-- **git log**
+- #### git log
 
 To show the chronological commit history for a repository. This helps give context and history for a repository. git log is available immediately on a recently cloned repository to see history.
 
@@ -438,7 +439,7 @@ Date:   Tue Oct 25 17:46:11 2016 -0500
     Updating the wording of the homepage footer 
 ```
 
-- **git rm**
+- #### git rm
 
 Remove files or directories from the working index (staging area). With git rm, there are two options to keep in mind: force and cached. Running the command with force deletes the file. The cached command removes the file from the working index. When removing an entire directory, a recursive command is necessary.
 
