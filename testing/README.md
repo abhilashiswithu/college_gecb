@@ -27,8 +27,8 @@ Everyone can use GIT as it is available for Linux, Windows, Mac, and Solaris. Th
 Here are some basic GIT commands you need to know:
 
 ### Working with local repositories
-
-#### - **git init**
+-
+#### git init
 
 This command turns a directory into an empty Git repository. This is the first step in creating a repository. After running git init, adding and committing files/directories is possible.
 
